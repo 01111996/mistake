@@ -60,7 +60,7 @@ def test_post_form():
     response = requests.post(f"{BASE_URL}/post", data=form_data)
     assert response.status_code == 200
     data = response.json()
-    assert data["form"]["login"] == "login_1""
+    assert data["form"]["login"] == "login_1"
     assert data["form"]["password"] == "12345670"
     assert data["form"]["save"] == "on"
     assert "application/x-www-form-urlencoded" in data["headers"]["content-type"], (
